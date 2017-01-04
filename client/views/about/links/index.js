@@ -1,7 +1,6 @@
 import React from "react"
 import CopyTriggerWrapper from "shared_components/copy-object"
 import IconButtonWrapper from "shared_components/icon-button-wrapper"
-import { Parallax, Background } from "react-parallax"
 import InlineSVG from "react-inlinesvg"
 import github from "images/about/github"
 import codepen from "images/about/codepen"

@@ -1,7 +1,16 @@
-//
-// @import "./links/links";
+.flex-container {
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	background-color: white;
+	margin-top: -5px;
+	z-index: 3000;
+}
 .section-a {
-	width: 70vw;
+	width: 102vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -14,40 +23,53 @@
     justify-content: center;
 	 height: 70vh;
 }
+.big-font {
+	font-size: 2.5rem;
+}
+.normal-font {
+	font-size: 1.2rem;
+}
 .talks{
-	font-size: 1.25rem;
+	margin-top: -10px;
+	font-family: Roboto, sans-serif;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background-color: white;
-	width: 70vw;
-	height: 20vh;
-	margin-top: -5vh;
-}
-.in-the-box {
+	width: 100vw;
 	position: relative;
-	z-index: 7000;
-	top: -20vh;
+	z-index: 1000;
+	padding: 5vh;
 }
+
 .profile-picture {
 	height: 295px;
 	filter: grayscale(100%);
 	border-radius: 2%;
 }
 .name-container {
-	width: 70vw!important;	//background-color: black;
+	width: 105vw!important;	//background-color: black;
+	margin-top: -1px;
+
+}
+.header {
+	background-color: white;
 }
 
 .white {
 	fill: white!important;
+	stroke: black;
 }
 .box {
 	margin: 0;
-	margin-top: -5px;
-	width: 73vw!important;
+	margin-top: -10px;
+	width: 110vw!important;
 }
-//
-//
+.title {
+	margin-top: -10px;
+	background-color: white;
+}
+
 // .title-container {
 // 	margin-bottom: 2px;
 // 	display: flex;

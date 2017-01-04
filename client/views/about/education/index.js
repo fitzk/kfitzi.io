@@ -5,7 +5,6 @@ import { Parallax } from "react-parallax"
 import OregonState from "./oregon-state"
 import UCSB from "./ucsb"
 import Header from "shared_components/header"
-import img from "images/background/gold.jpg"
 
 const Education = props => {
   const scrollHeight = 0

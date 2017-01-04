@@ -4,7 +4,8 @@
     flex-direction: column;
     align-items: space-around;
     justify-content: center;
-	 width: 75vw;
+	 width: 102vw;
+	 margin-top: -2vh;
 }
 
 .social-links {
@@ -18,14 +19,12 @@
 }
 
 .social-link {
-		color: black!important;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 10vw;
-    height: 13vh;
     align-items: center;
 }
 
 .fa {
-	color: black;
+	color:black;
 }
