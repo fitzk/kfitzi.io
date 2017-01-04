@@ -1,37 +1,35 @@
 @import "./education.scss";
 
-
-// @import "media.scss";
-//
 html {
     width: 100%!important;
     height: 100%!important;
 
 }
-//
+
 body {
     margin: 0;
     padding: 0;
 }
-//
-// #app {
-//     width: 100% !important;
-//     height: 100% !important;
-//     padding: 0;
-//     margin: 0;
-// }
-//
-// li {
-//     list-style: none;
-// }
-//
-// a {
-//     color: darkcyan;
-// }
-//
-// p {
-//     flex-wrap: wrap;
-// }
+
+.scroll-arrow {
+  right: 5vw;
+  bottom: 5vh;
+  margin: auto;
+  z-index: 7000;
+  position: fixed;
+  opacity: .5 !important;
+
+  &:active {
+      opacity: 1 !important;
+      stroke: black;
+  }
+
+  &:hover {
+      opacity: 1 !important;
+      stroke: black;
+      fill: black;
+  }
+}
 // .tag {
 // 	font-size: 12px;
 // 	border: black .5px solid;
@@ -40,8 +38,4 @@ body {
 // 	padding: 3px;
 // 	border-radius: 2px;
 // 	background-color: white;
-// }
-//
-// .drawer {
-// 	background-color: black!important;
 // }
