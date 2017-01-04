@@ -34,10 +34,6 @@ export default class Layout extends Component {
       <span>
       <MuiThemeProvider muiTheme={ getMuiTheme(theme) }>
 			 <div>
-				 <AppBar />
-					 <DrawerComponent click={ (e) => {
-        this.onClick(e)
-      }} open={ this.state.open }/>
 					 <div className="main-container">
 						 { this.props.children }
 					 </div>
