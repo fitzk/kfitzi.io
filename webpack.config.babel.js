@@ -28,9 +28,8 @@ export default () => ({
     vendor: [
       "clipboard", "core-decorators", "group-css-media-queries",
       "highlight.js", "immutable", "lodash", "material-ui",
-      "react", "react-addons-transition-group", "react-lazyload",
-      "react-dom", "react-highlight",
-      "react-parallax", "react-redux", "react-router", "react-router-redux",
+      "react", "react-addons-transition-group",
+      "react-dom", "react-parallax", "react-redux", "react-router", "react-router-redux",
       "react-scroll", "react-tap-event-plugin", "redux-thunk", "redux-ui", "wpapi"
     ]
   },
