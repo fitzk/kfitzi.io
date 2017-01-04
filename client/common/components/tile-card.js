@@ -2,7 +2,6 @@ import React, { PropTypes, Component } from "react"
 import { Card, CardHeader, CardText } from "material-ui"
 import TileAvatar from "shared_components/avatar/tile"
 import SquareSmallAvatar from "shared_components/avatar/square-small"
-// import "styles/index.scss"
 
 const TileCard = ({expanded, title, initiallyExpanded, avatar, onExpandChange, className, headerClassName, children, name, avatarStyle}) => {
 
