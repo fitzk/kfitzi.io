@@ -1,0 +1,21 @@
+// @mixin scroll-arrow($arrow-size,$arrow-right,$arrow-bottom) {
+//     .scroll-arrow {
+//         right: $arrow-right;
+//         bottom: $arrow-bottom;
+//         margin: auto;
+//         z-index: 7;
+//         position: fixed;
+//         opacity: .5 !important;
+//
+//         &:active {
+//             opacity: 1 !important;
+//             stroke: black;
+//         }
+//
+//         &:hover {
+//             opacity: 1 !important;
+//             stroke: black;
+//             fill: black;
+//         }
+//     }
+// }

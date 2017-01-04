@@ -1,0 +1,31 @@
+.links-view {
+		background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: center;
+	 width: 75vw;
+}
+
+.social-links {
+	align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+}
+
+.social-link {
+		color: black!important;
+    display: flex;
+    flex-direction: row;
+    width: 10vw;
+    height: 13vh;
+    align-items: center;
+}
+
+.fa {
+	color: black;
+}

@@ -1,0 +1,43 @@
+// @mixin nested-card($width, $margin-bottom, $flex-direction, $font-size, $left) {
+//     .nested-card {
+//         & * {
+//         }
+//         align-self: center;
+//         animation-duration: .2s !important;
+//         border: 1px black solid;
+//         flex-grow: 0;
+//         flex-wrap: wrap;
+//         justify-content: center;
+//         left: $left;
+//         margin-bottom: $margin-bottom;
+//         overflow: visible;
+//         position: relative;
+//         transition-timing-function: ease-in-out;
+//         transition: height linear 1.5s !important;
+//         width: $width;
+//
+//         & iframe {
+//             width: auto;
+//         }
+//
+//         & .nested-header {
+//
+//             & div span:nth-child(1) {
+//                 margin-top: 9px;
+//                 font-size: 1.3rem !important;
+//             }
+//         }
+//
+//     }
+//     .concept {
+//         width: auto;
+//     }
+// }
+//
+// .nested-text {
+//     background-color: antiquewhite;
+// }
+//
+// .nested-header.concept {
+//     background-color: antiquewhite;
+// }

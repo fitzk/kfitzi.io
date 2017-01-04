@@ -1,0 +1,31 @@
+// @import "~src/views/about/about.scss";
+// @import "~src/views/notebook/index.scss";
+// @import "mixins/scroll-arrow";
+// @import "mixins/drawer-mixins";
+// @import "mixins/card";
+// @import "mixins/nested-card";
+// @import "mixins/main-container";
+// @import "mixins/tile";
+// @import "mixins/grid";
+//
+// // LARGE screens
+// @include main-mixin (100vh, 100vw, 0);
+// @include scroll-arrow(24px, 5%, 5%);
+// @include menu-items(10vh, 1.2rem);
+// @include card(90vw, 2%, column, wrap-reverse, 1rem, false);
+// @include nested-card(80vw, 0, column, 1rem, 0);
+// @include tile-mixin(200px, 200px);
+// @include grid()
+//
+// .dip {
+//     margin-top: 25vh;
+// }
+//
+// @media only screen and (min-device-width: 375px) and (max-device-width: 567px) {
+//     @include card(95vw, 2%, column, wrap-reverse, 1rem, false);
+//     @include nested-card(80vw, 0, column, 1rem, 0);
+//     @include tile-mixin(100px, 100px);
+//     .dip {
+//         margin-top: 100vh;
+//     }
+// }

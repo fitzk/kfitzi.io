@@ -1,0 +1,54 @@
+// @import "grid";
+//
+// @mixin card($width, $margin-bottom, $flex-direction, $flex-wrap, $font-size, $border) {
+//
+//     h3 {
+//         font-size: $font-size;
+//     }
+//     .outer-card {
+//         align-self: center;
+//         display: flex;
+//         width: $width;
+//         flex-direction: column;
+//         position: relative;
+//         justify-content: center;
+//         font-size: $font-size;
+//         background-color: transparent !important;
+//     }
+//
+//     .outer-card-header {
+//         background-color: transparent !important;
+//         font-family: Roboto, sans-serif;
+//         font-weight: 200;
+//         align-self: center;
+//     }
+//
+//     .card {
+//         transition-timing-function: ease-in-out;
+//         transition: height linear 3.5s !important;
+//         border: solid black 1px;
+//         flex-grow: 0;
+//         background-color: lightsteelblue;
+//         flex-shrink: 3;
+//         justify-content: center;
+//         align-self: center;
+//         max-width: 75vw !important;
+//         min-width: $width;
+//         margin: auto;
+//         margin-bottom: 200px;
+//     }
+//     p {
+//         font-size: $font-size !important;
+//     }
+//     .header {
+//         position: relative;
+//         width: 100%;
+//         flex-grow: 0;
+//
+//         & div span {
+//             margin-top: 8px;
+//         }
+//
+//     }
+//
+// }
