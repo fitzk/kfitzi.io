@@ -14,6 +14,7 @@ const About = props => {
     <div className="flex-container">
 	  <SectionA/>
 	  <Education/>
+	  <SectionB/>
 	 </div>
   )
 }

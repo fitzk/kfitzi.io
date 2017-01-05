@@ -10,7 +10,7 @@ const UCSB = props => {
     style={{
       alignSelf: 'center',
       width: '70vw',
-      marginBottom: '20px'
+      marginBottom: '10vh'
     }}>
 	 <CardHeader
     titleStyle={{

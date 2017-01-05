@@ -10,7 +10,7 @@ const IconButtonWrapper = props => {
   return (
     <IconButton tooltip={props.tooltip} tooltipPosition="top-center">
             <FontIcon>
-                <i className={props.iconClassName}/>
+                <i style={props.style} className={props.iconClassName}/>
                 {props.children}
             </FontIcon>
         </IconButton>

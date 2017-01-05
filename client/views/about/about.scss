@@ -1,3 +1,7 @@
+* {
+	font-family: Roboto, sans-serif;
+}
+
 .flex-container {
 	align-self: center;
 	display: flex;
@@ -31,7 +35,6 @@
 }
 .talks{
 	margin-top: -10px;
-	font-family: Roboto, sans-serif;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -58,7 +61,6 @@
 
 .white {
 	fill: white!important;
-	stroke: black;
 }
 .box {
 	margin: 0;
@@ -69,14 +71,65 @@
 	margin-top: -10px;
 	background-color: white;
 }
+.footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	height: 25vh;
+	width: 100vw;
+	background-color: black;
+	color: white;
+	padding: 5px;
+}
+.right, .center, .left {
+	margin: 10px;
+	display: flex;
+}
 
-// .title-container {
-// 	margin-bottom: 2px;
-// 	display: flex;
-// 	flex-direction: column;
-// 	align-items: center;
-// 	justify-content: flex-start;
-// 	background-color: transparent;
-// 	width: 100vw;
-// 	height: 100vh;
-// }
+.center {
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.right, .left {
+	flex-direction: row;
+	align-items: flex-end;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+}
+
+.fade-in.one {
+-webkit-animation-delay: 0.7s;
+-moz-animation-delay: 0.7s;
+animation-delay: 0.7s;
+}
+
+.fade-in.two {
+-webkit-animation-delay: 1.2s;
+-moz-animation-delay:1.2s;
+animation-delay: 1.2s;
+}
+
+.fade-in.three {
+-webkit-animation-delay: 1.6s;
+-moz-animation-delay: 1.6s;
+animation-delay: 1.6s;
+}

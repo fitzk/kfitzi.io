@@ -61,20 +61,10 @@ export default class DialogAlert extends Component {
 
   render() {
     const actions = [
-      <FlatButton
-      label="Cancel"
-      primary={true}
-      onTouchTap={this.handleClose.bind(this)}
-      />,
+      <FlatButton label="Cancel" primary={true} onTouchTap={this.handleClose.bind(this)} />,
       <a href={this.state.url} download={true}>
-                <FlatButton
-      label="Download"
-      primary={true}
-      onTouchTap={ this.downloadResume.bind(this)
-      }
-      />
-
-                </a>,
+			<FlatButton label="Download" primary={true} onTouchTap={ this.downloadResume.bind(this) }/>
+		</a>,
     ]
 
     return (
@@ -83,10 +73,10 @@ export default class DialogAlert extends Component {
         width: '100vw',
         height: '50vh'
       }}/>
-	<RaisedButton label="Resume"  onClick={this.handleOpen.bind(this)} primary={true} />
+	<RaisedButton label="Download Resume"  onClick={this.handleOpen.bind(this)} primary={true} />
 	<Dialog actions={actions} modal={false}
       open={this.state.open} onRequestClose={this.handleClose.bind(this)}>
-      Download Resume? </Dialog>
+      Download pdf? </Dialog>
       </Parallax>
     )
   }

@@ -10,7 +10,7 @@ const Education = props => {
   const scrollHeight = 0
   Scroll.animateScroll.scrollTo(scrollHeight)
   return (
-    <div className="flex-container">
+    <div className="flex-container fade-in three">
 			<OregonState/>
 			<UCSB/>
 		</div>
