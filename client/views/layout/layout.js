@@ -32,20 +32,20 @@ export default class Layout extends Component {
   render() {
     return (
       <span>
-      <MuiThemeProvider muiTheme={ getMuiTheme(theme) }>
-			 <div>
-					 <div className="main-container">
-						 { this.props.children }
-					 </div>
-					 <div className="scroll-arrow">
-						 <Link to="" onClick={() => {
+	      <MuiThemeProvider muiTheme={ getMuiTheme(theme) }>
+				 <div>
+						 <div className="main-container">
+							 { this.props.children }
+						 </div>
+						 <div className="scroll-arrow">
+							 <Link to="" onClick={() => {
         Scroll.animateScroll.scrollTo(0)
       }} smooth={ true } duration={ 500 }>
-							 <i className="fa fa-arrow-circle-up fa-3x"/>
-					 </Link>
+								 <i className="fa fa-arrow-circle-up fa-4x"/>
+						 </Link>
+					 </div>
 				 </div>
-			 </div>
-		 </MuiThemeProvider>
+			 </MuiThemeProvider>
 	 </span>
     )
   }
