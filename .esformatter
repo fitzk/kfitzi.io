@@ -1,0 +1,47 @@
+{
+  "plugins":[
+    "esformatter-jsx",
+    "esformatter-quotes",
+    "esformatter-curly",
+    "esformatter-ignore"
+  ],
+  "quotes": {
+     "type": "double",
+     "avoidEscape": false
+   },
+  "jsx": {
+    "formatJSX": true,
+    "attrsOnSameLineAsTag": false,
+    "maxAttrsOnTag": 1,
+    "firstAttributeOnSameLine": true,
+    "alignWithFirstAttribute": true,
+    "spaceInJSXExpressionContainers": " "
+    },
+    "indent": {
+      "value": "\t",
+      "FunctionExpression": 1,
+      "ArrayExpression": 1,
+      "ObjectExpression": 1
+    },
+    "lineBreak": {
+      "before": {
+        "FunctionDeclaration": "0",
+        "FunctionDeclarationOpeningBrace": 0,
+        "FunctionDeclarationClosingBrace": 0
+      },
+      "after": {
+        "FunctionDeclaration": "0",
+        "FunctionDeclarationOpeningBrace": 0
+      }
+    },
+    "whiteSpace": {
+    "before": {
+      "FunctionExpressionOpeningBrace": 1,
+      "FunctionExpressionClosingBrace": 1
+          },
+    "after": {
+      "FunctionExpressionOpeningBrace": 1,
+      "FunctionExpressionClosingBrace": -1
+    }
+  }
+}
