@@ -5,15 +5,15 @@ import styled, { css } from "styled-components";
 const title = styled.div`
   overflow: hidden;
 	display: flex;
-  margin-left: 15px;
   height: ${props => props.h || "auto"};
 `
 export const H1 = styled(title)`
   color: ${props => props.theme.palette.accent3Color};
   font-size: 3em;
+  margin=left: ${props => props.marginLeft};
   font-weight: bold;
+  padding:  ${props => props.padding};;
 `
 export const H2 = styled(title)`
 	font-size: 2em;
-`
-/*esfmt-ignore-end*/
+`/*esfmt-ignore-end*/
