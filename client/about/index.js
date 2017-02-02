@@ -1,20 +1,36 @@
 import React from "react"
-import { Card, CardText, Paper, AppBar } from "material-ui"
-import Scroll, { Link } from "react-scroll"
-import se from "images/about/title.svg"
-import InlineSVG from "react-inlinesvg"
-import DialogAlert from "./dialog"
-import Links from "./links"
-import "./about.scss"
-import MediaQuery from "react-responsive"
-import { LandingPage } from "./../landing-page"
-import { StyledSection } from "./../styled-components/containers"
+import styled from "styled-components";
+import { Row, Column, H1 } from "components"
 
+/*esfmt-ignore-start*/
+const Paragraph = styled(Row)`
+	font-family: Roboto, Sans-serif;
+	margin: 10px;
+	max-width: 50vw;
+	margin-bottom: 20vh;
+`
+const FontContainer = styled.div`
+	height: 1em
+	margin: 5px;
+`
+/*esfmt-ignore-end*/
 export const About = props => {
+	/*esfmt-ignore-start*/
+	const header = <H1> about </H1>;
+	/*esfmt-ignore-end*/
 
-	const scrollHeight = 0
-	Scroll.animateScroll.scrollTo(scrollHeight)
-	return <StyledSection>
-          <div/>
-        </StyledSection>
+	return <Column>
+          <Column alignStart>
+            <Row>
+              { header }
+            </Row>
+            <Paragraph>
+              { `California native && SF Bay Area software developer. ` }
+              <FontContainer>
+                <a href="https://twitter.com/kfitzikfitzi"><i className="fa fa-twitter"
+                                                              aria-hidden="true"></i></a>
+              </FontContainer>
+            </Paragraph>
+          </Column>
+        </Column>
 }
