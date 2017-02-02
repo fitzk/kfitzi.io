@@ -1,54 +1,33 @@
 import React from "react"
-import { Card, CardText, Paper } from "material-ui"
-import Scroll, { Link } from "react-scroll"
-import InlineSVG from "react-inlinesvg"
-import logo from "images/logo/white_logo_dark_background.jpg"
+import logo from "./../assets/images/logo/logo_transparent_background.png"
 import styled from "styled-components"
+import { Row, Column } from "components"
 
-const Section = styled.div`
-	top: 100vh;
-	position: relative;
-	z-index: 20;
-	background-color: black;
+/* esfmt-ignore-start */
+const RowFooter = styled(Row)`
+	background-color: ${props => props.theme.palette.primary1Color};
 	width: 100vw;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-`
+	font-family: Roboto, Sans-serif;
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px;
+	color: white;
+	padding: 0;
+	margin: 0;
+`/* esfmt-ignore-end */
+
 export const Footer = props => {
-	return (
-		<Section>
-    <div>
-      <div>
-        <img style={ { height: "100px", width: "100px", marginBottom: "20px" } }
-             src={ logo } />
-      </div>
-      <div>
-        <div>
-          © 2016-present Kayla Fitzsimmons
-        </div>
-      </div>
-      <div>
-      </div>
-    </div>
-  </Section>
-		);
+	return <RowFooter alignCenter
+                   justifySpaceAround>
+          <Column alignEnd
+                  justifyEnd>
+            <img style={ { height: "100px", width: "100px", marginBottom: "20px" } }
+                 src={ logo } />
+          </Column>
+          <Column alignEnd
+                  justifyEnd>
+            © 2016-present Kayla Fitzsimmons
+          </Column>
+          <Column>
+          </Column>
+        </RowFooter>
+
 }
-
-
-/* <a href="http://stackoverflow.com/users/6846678/kfitzi"><img src="http://stackoverflow.com/users/flair/6846678.png?theme=Clean"
-                                                             width="200"
-                                                             height="auto"
-                                                             alt="profile for kfitzi at Stack Overflow, Q&amp;A for professional and enthusiast programmers"
-                                                             title="profile for kfitzi at Stack Overflow, Q&amp;A for professional and enthusiast programmers" /></a>
-<a href="https://github.com/fitzk/kfitzi.io">
-  <IconButtonWrapper style={ { color: "white" } }
-                     iconClassName="fa fa-github-alt fa-lg"
-                     tooltip="code for this site"> </IconButtonWrapper>
-</a>
-<a href="https://twitter.com/kfitzikfitzi">
-  <IconButtonWrapper style={ { color: "white" } }
-                     iconClassName="fa fa-twitter fa-lg"
-                     tooltip="tweet @ me"> </IconButtonWrapper>
-</a> */
