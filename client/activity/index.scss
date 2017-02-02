@@ -1,0 +1,12 @@
+@import "~codemirror/lib/codemirror.css";
+@import "~codemirror/theme/neo.css";
+
+.CodeMirror pre {
+	font-family: Roboto, sans-serif;
+}
+.ReactCodeMirror {
+	width: 60vw;
+}
+.cm-def {
+		text-decoration: none;
+}
