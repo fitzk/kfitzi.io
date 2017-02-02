@@ -3,18 +3,19 @@ import React, { Component } from "react"
 import { AppContainer } from "react-hot-loader"
 import { render } from "react-dom"
 import injectTapEventPlugin from "react-tap-event-plugin"
-import App from "./app"
+import { Routes } from "./routes"
+import "./index.scss"
 
 injectTapEventPlugin()
 
 const renderApp = () => {
 	render(<AppContainer>
-          <App/>
+          <Routes/>
         </AppContainer>, document.getElementById("app"));
 }
 
 renderApp() // Renders App on init
 
 if (module.hot) {
-	module.hot.accept("./app.js", renderApp)
+	module.hot.accept("./routes.js", renderApp)
 }

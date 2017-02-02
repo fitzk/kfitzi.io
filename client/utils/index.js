@@ -4,7 +4,6 @@ export const nav = (url) => {
 	window.open(`${url}`);
 }
 
-export const scroll = () => {
-	const scrollHeight = 0
-	Scroll.animateScroll.scrollTo(scrollHeight)
+export const scroll = (it = 0) => {
+	Scroll.animateScroll.scrollTo(it)
 }

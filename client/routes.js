@@ -1,17 +1,24 @@
 import React, { Component } from "react"
-import { Route, Router, IndexRoute, browserHistory } from "react-router"
+import { Router, Route, Link, IndexRoute, browserHistory } from "react-router"
 import ReactDOM from "react-dom"
-import App from "./app"
+import { App } from "./app"
 import { About } from "./about"
+import { ActivityStream } from "./activity"
+import { LandingPage } from "./landing-page"
+import { Projects } from "./projects"
 
-export default class Routes extends Component {
+
+export class Routes extends Component {
 	render() {
-		return <Router history={ browserHistory }
-                 key={ Math.random() }>
-           <Route path="/"
-                  component={ App } />
-           <Route path="/about"
-                  component={ About } />
+		return <Router history={ browserHistory }>
+           <Route component={ App }>
+             <Route path="/"
+                    component={ About } />
+             <Route path="/activity"
+                    component={ ActivityStream } />
+             <Route path="/projects"
+                    component={ Projects } />
+           </Route>
          </Router>
 	}
 }
