@@ -10,31 +10,33 @@ const PATHS = {
 	src: path.join(__dirname, "/client/"),
 }
 const extractCSS = new ExtractTextPlugin({
-	filename: "[name].bundle.css"
+	filename: "[name].css",
+	allChunks: true
 })
 
 export default () => ({
 	entry: {
 		src: [
 			"babel-polyfill",
-			// Needed to preserve state on re-render
 			"react-hot-loader/patch",
-			// WDS host and port
 			"webpack-dev-server/client?http://localhost:8080",
-			// entry file ./index.js
 			path.join(PATHS.src, "index.js")
 		],
 		vendor: [
-			"clipboard",
-			"immutable",
 			"material-ui",
+			"moment",
 			"react",
 			"react-addons-transition-group",
+			"react-codemirror",
 			"react-dom",
-			"react-parallax",
+			"react-inlinesvg",
+			"react-responsive",
 			"react-router",
+			"react-router-dom",
 			"react-scroll",
-			"react-tap-event-plugin"
+			"react-tap-event-plugin",
+			"styled-components",
+			"whatwg-fetch"
 		]
 	},
 	output: {
@@ -82,11 +84,18 @@ export default () => ({
 				use: "json-loader"
 			},
 			{
-				test: /\.scss$/,
-				loader: extractCSS.extract([
-					"css-loader",
-					"sass-loader"
-				])
+				test: /\.(css|scss)$/,
+				use: extractCSS.extract({
+					loader: [
+						{
+							loader: "css-loader"
+						},
+						{
+							loader: "sass-loader"
+						}
+					],
+					fallbackLoader: "style-loader"
+				})
 			},
 			{
 				test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)(\?.*$|$)/,
@@ -109,24 +118,15 @@ export default () => ({
 								modules: false
 							}
 						],
+						"es2017",
 						"react",
 						"stage-1"
-					],
-					plugins: []
+					]
 				}
 			},
 			{
 				test: /\.html$/,
 				use: "file-loader"
-			},
-			{
-				test: /\.md$/,
-				use: [
-					"html-loader",
-					"highlight-loader",
-					"markdown-loader"
-				],
-				exclude: /node_modules/
 			}
 		],
 	},
