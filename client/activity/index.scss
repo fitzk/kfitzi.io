@@ -4,8 +4,25 @@
 .CodeMirror pre {
 	font-family: Roboto, sans-serif;
 }
+.CodeMirror {
+	height: auto!important;
+	position: relative;
+	overflow-y: scroll;
+}
+@media (min-device-width: 1224px) {
+	.ReactCodeMirror {
+		width: 600px;
+	}
+}
+@media (max-device-width: 1224px) {
+	.ReactCodeMirror {
+		max-width: 300px!important;
+	}
+}
+
+
 .ReactCodeMirror {
-	width: 60vw;
+//	height: 100%!important;
 }
 .cm-def {
 		text-decoration: none;
