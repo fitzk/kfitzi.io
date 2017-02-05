@@ -6,7 +6,6 @@ import styled, { css } from "styled-components"
 /* esfmt-ignore-start */
 const flex = css`
   display: flex;
-	margin: 5px;
 `
 const align = ({
 	alignCenter,
@@ -41,11 +40,26 @@ const justify = ({
 				 "center"
 };
 
+const wrap = ({
+  nowrap,
+  wrap,
+  wrapReverse
+}) => {
+  return nowrap && "nowrap" ||
+  wrap && "wrap" ||
+  wrapReverse && "wrap-reverse" ||
+  "wrap"
+};
+
 const orientation = styled.div`
 	align-items: ${props => align(props)};
 	justify-content: ${props => justify(props)};
-	flex-basis: ${props => props.flexBasis || 'auto'}
+  ${props => `flex-wrap: ${wrap(props)}`};
+  ${props => props.flexBasis && `flex-basis: ${props.flexBasis}`};
+  ${props => props.flexGrow && `flex-basis: ${props.flexGrow}`};
+  ${props => props.flexShrink && `flex-shrink: ${props.flexShrink}`};
 `
+
 export const Display = styled(orientation)`
   ${flex}
   flex-direction: ${props => props.row && "row" || "column" };
@@ -69,7 +83,8 @@ export const ColumnRow = ({props}) => {
             </Display>
           </MediaQuery>
           <MediaQuery query="(max-device-width: 1224px)">
-            <Display row
+            <Display mobile
+                     row
                      {...props}>
               { props.children }
             </Display>
@@ -86,7 +101,8 @@ export const RowColumn = props => {
             </Display>
           </MediaQuery>
           <MediaQuery query="(max-device-width: 1224px)">
-            <Display {...props}>
+            <Display mobile
+                     {...props}>
               { props.children }
             </Display>
           </MediaQuery>

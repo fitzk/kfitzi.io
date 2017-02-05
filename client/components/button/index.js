@@ -1,5 +1,6 @@
 import React from "react"
 import MediaQuery from "react-responsive"
+import { Link } from "react-router"
 import { nav } from "utils"
 import styled, { css } from "styled-components";
 
@@ -46,8 +47,7 @@ ${ orange }
 export const Button = props => {
 	let n = () => nav(props.to)
 	let submit = props.submit && props.onSubmit;
-	let navToTab = props.nav && n
-
+	let navToTab = props.nav && n;
 	return <div>
           <MediaQuery query="(min-device-width: 1224px)">
             <ButtonOrange onClick={ navToTab }
@@ -59,6 +59,28 @@ export const Button = props => {
             <MobileButtonOrange onClick={ navToTab }
                                 submit={ submit }>
               { props.children }
+            </MobileButtonOrange>
+          </MediaQuery>
+        </div>
+}
+
+export const LinkButton = props => {
+	console.log(props)
+	return <div>
+          <MediaQuery query="(min-device-width: 1224px)">
+            <ButtonOrange onClick={ (e) => e.preventDefault() }>
+              <Link style={ { textDecoration: "none", color: "#E64A19" } }
+                    to={ props.to }>
+              { props.children }
+              </Link>
+            </ButtonOrange>
+          </MediaQuery>
+          <MediaQuery query="(max-device-width: 1224px)">
+            <MobileButtonOrange onClick={ (e) => e.preventDefault() }>
+              <Link style={ { textDecoration: "none", color: "#E64A19" } }
+                    to={ props.to }>
+              { props.children }
+              </Link>
             </MobileButtonOrange>
           </MediaQuery>
         </div>
