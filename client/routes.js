@@ -33,8 +33,6 @@ export class Routes extends Component {
            <Router history={ history }>
              <Route component={ App }>
                <Route path="/"
-                      component={ About } />
-               <Route path="/activity"
                       component={ ActivityStream } />
                <Route path="/projects"
                       component={ Projects } />

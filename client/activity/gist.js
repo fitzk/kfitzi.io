@@ -13,20 +13,19 @@ import styled from "styled-components"
 const Container = styled(Column)`
 	background-color: white;
 	color: black
-	padding: 1em;
-	position: relative;
-	width: 90%;
+	width: auto;
+	height: auto;
 	margin: .5em;
+	width: 70vw;
+	padding: 24px;
 `
 const Description = styled(Row)`
-	padding: 10px;
 	font-family: Roboto, Sans-serif;
-	margin-bottom: 0;
+	width: 60vw;
 `/*esfmt-ignore-end*/
 
 const Gist = ({index, created_at, description, children}) => {
-	return <Column key={ index }
-                alignCenter
+	return <Column alignCenter
                 justifyCenter>
           <Container>
             <Description alignStart

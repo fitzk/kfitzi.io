@@ -141,20 +141,22 @@ export class Gists extends Component {
 
 				let codefiles = gist.fileObjects.map(file => {
 					let index = gist.fileObjects.indexOf(file)
-					return <File index={ index }
+					return <File key={ index }
                   filename={ file.filename }
                   language={ file.language }
                   code={ file.code } />
 				});
 
-				return <Gist index={ this.state.gists.indexOf(gist) }
+				return <Gist key={ this.state.gists.indexOf(gist) }
                  description={ gist.description }
                  created_at={ gist.created_at }>
              { codefiles }
            </Gist>
 			});
 		}
-		return <GistContainer>
+		return <GistContainer alignCenter
+                        justifyCenter
+                        wrap>
            { gists }
          </GistContainer>
 	}

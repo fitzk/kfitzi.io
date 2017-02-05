@@ -9,14 +9,14 @@ import { Gists } from "./gists"
 
 /*esfmt-ignore-start*/
 const Container = styled(Column)`
-align-self: flex-end;
-height: inherit;
-min-height: 90vh;
-
+	height: inherit;
+	min-height: 90vh;
+	width: 85vw;
 `/*esfmt-ignore-end*/
 
 const ActivityStream = props => {
-	return <Container>
+	return <Container wrap
+                   alignCenter>
           <H1 children="activity: gists"
               marginLeft="20px"
               padding="20px" />

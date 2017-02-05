@@ -9,8 +9,8 @@ const title = styled.div`
 `
 export const H1 = styled(title)`
   color: ${props => props.theme.palette.accent3Color};
-  font-size: 3em;
-  margin=left: ${props => props.marginLeft};
+  font-size: 3.5em;
+  margin-left: ${props => props.marginLeft};
   font-weight: bold;
   padding:  ${props => props.padding};;
 `

@@ -9,20 +9,9 @@
 	position: relative;
 	overflow-y: scroll;
 }
-@media (min-device-width: 1224px) {
-	.ReactCodeMirror {
-		width: 600px;
-	}
-}
-@media (max-device-width: 1224px) {
-	.ReactCodeMirror {
-		max-width: 300px!important;
-	}
-}
-
 
 .ReactCodeMirror {
-//	height: 100%!important;
+	width: "50vw"
 }
 .cm-def {
 		text-decoration: none;
