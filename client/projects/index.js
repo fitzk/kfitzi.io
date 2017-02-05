@@ -4,21 +4,25 @@ import { scroll } from "utils"
 import { Element } from "react-scroll"
 import { Row, Column, H1, H2 } from "components"
 import * as moment from "moment"
+
 /*esfmt-ignore-start*/
 const Paragraph = styled(Column)`
-	font-family: Roboto, Sans-serif;
-	margin: 5px;
-	width: 60vw;
+font-family: Roboto, Sans-serif;
+margin: 5px;
 `
 const Content = styled(Column)`
-	width: 60vw;
+	padding: 1em;
+	height: inherit;
+	min-height: 90vh;
+`
+const Repos = styled(Column)`
+	flex-grow: 2;
 `
 const A = styled.a`
-text-decoration: none;
-color: blue;
-font-size: 1rem;
-`
-/*esfmt-ignore-end*/
+	text-decoration: none;
+	color: lightblue;
+	font-size: 1.2rem;
+`/*esfmt-ignore-end*/
 
 export class Projects extends Component {
 	constructor(props) {
@@ -27,6 +31,7 @@ export class Projects extends Component {
 			repos: undefined
 		}
 	}
+
 	fetchStats(repo) {
 		try {
 			const url = `https://api.github.com/users/fitzk/repos?sort=created&type=public`;
@@ -44,25 +49,29 @@ export class Projects extends Component {
 			console.error(error)
 		}
 	}
+
 	async componentDidMount() {
 		let g = await this.fetchStats("kfitzi.io");
 		this.setState({ repos: JSON.parse(g) })
 	}
+
 	titleCase(string) {
 		return string.charAt(0).toUpperCase() + string.slice(1);
 	}
+
 	formatName(string) {
 		if (string.match(/[A-Z][a-z]+/g))
 			string = string.match(/[A-Z][a-z]+/g).join("-")
 		let strings = string.split("-")
 		return strings.map(string => this.titleCase(string)).join(" ")
 	}
+
 	render() {
 
-		const header = <H1 children="recent projects" />
 		let repos = <H2 children="loading..." />
+
 		if (this.state.repos) {
-			scroll((window.innerHeight / 2.2))
+
 			repos = this.state.repos.filter(repo => new Date(repo.created_at) > new Date("2016-01-01")).map(repo => {
 				let description = ""
 				if (repo.description)
@@ -85,9 +94,13 @@ export class Projects extends Component {
            </Paragraph>
 			});
 		}
-		return <Column justifyStart>
-           { header }
-           { repos }
-         </Column>
+		return <Content alignStart
+                  justifyStart>
+           <H1 children="recent projects" />
+           <Repos justifySpaceAround
+                  alignStart>
+             { repos }
+           </Repos>
+         </Content>
 	}
 }
