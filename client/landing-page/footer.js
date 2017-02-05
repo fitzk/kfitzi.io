@@ -1,32 +1,30 @@
 import React from "react"
 import logo from "./../assets/images/logo/logo_transparent_background.png"
 import styled from "styled-components"
-import { Row, Column } from "components"
+import { RowColumn, Column } from "components"
 
 /* esfmt-ignore-start */
-const RowFooter = styled(Row)`
+const RowFooter = styled(RowColumn)`
 	background-color: ${props => props.theme.palette.primary1Color};
-	width: 100vw;
 	font-family: Roboto, Sans-serif;
 	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px;
 	color: white;
-	padding: 0;
+	padding-top: 2em;
 	margin: 0;
+	width: 100%;
 `/* esfmt-ignore-end */
 
 export const Footer = props => {
-	return <RowFooter alignCenter
-                   justifySpaceAround>
-          <Column alignEnd
-                  justifyEnd>
-            <img style={ { height: "100px", width: "100px", marginBottom: "20px" } }
+	return <RowFooter alignStart
+                   justifySpaceBetween>
+          <Column>
+            <img style={ { height: "100px", width: "100px", margin: "10px" } }
                  src={ logo } />
           </Column>
-          <Column alignEnd
+          <Column style={ { height: "100px" } }
+                  alignEnd
                   justifyEnd>
             © 2016-present Kayla Fitzsimmons
-          </Column>
-          <Column>
           </Column>
         </RowFooter>
 
