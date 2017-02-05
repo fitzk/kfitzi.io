@@ -21,12 +21,10 @@ export const NameContainer= styled(Column)`
 const LandingPageHeader = props => {
 
 	return <Header>
-          <ProfileImage src={ me } />
-          <NameContainer alignStart>
+          <NameContainer alignCenter>
             { /* esfmt-ignore-start */ }
-									<H1>kayla</H1>
-									<H1>fitzsimmons</H1>
-									<H2>frontend developer </H2>
+									<H1>kayla fitzsimmons</H1>
+									<H2>software developer</H2>
 									<Links/>
  							{ /* esfmt-ignore-end */ }
           </NameContainer>

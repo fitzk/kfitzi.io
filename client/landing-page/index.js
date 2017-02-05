@@ -25,10 +25,8 @@ const View = styled(RowColumn)`
 	height: 90%;
 `
 const BackgroundWhite = styled(Column)`
-	min-width: 35vw;
-	align-self: flex-start;
-	margin-top: 12em;
-	margin-bottom: 15em;
+	margin: 1em;
+	padding: 1em;
 `/* esfmt-ignore-end */
 
 export class LandingPage extends Component {
@@ -54,10 +52,8 @@ export class LandingPage extends Component {
                            updateDrawerState={ this.updateDrawerState } />
            <Container>
              <View>
-               <BackgroundWhite alignCenter
-                                justifyCenter
-                                flexGrow="1"
-                                flexShrink="1"
+               <BackgroundWhite alignStart
+                                justifyStart
                                 onClick={ () => this.setState({ open: false }) }>
                  <LandingPageHeader/>
                </BackgroundWhite>

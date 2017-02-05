@@ -28,30 +28,16 @@ const BackgroundBlack = styled(Column)`
 `/* esfmt-ignore-end */
 
 const BlackSide = props => {
-	return <div>
-          <MediaQuery query="(min-device-width: 1224px)">
-            <BackgroundBlack alignCenter
-                             justifyCenter
-                             width="65vw"
-                             height="100%"
-                             overflow="scroll"
-                             flexShrink="0">
-              <Children>
-                { props.children }
-              </Children>
-            </BackgroundBlack>
-          </MediaQuery>
-          <MediaQuery query="(max-device-width: 1224px)">
-            <BackgroundBlack alignStart
-                             justifyStart
-                             width="100vw"
-                             overflow="visible"
-                             flexShrink="0">
-              <Children>
-                { props.children }
-              </Children>
-            </BackgroundBlack>
-          </MediaQuery>
-        </div>
+	return <BackgroundBlack alignCenter
+                         justifyCenter
+                         width="100vw"
+                         height="100%"
+                         overflow="scroll"
+                         flexShrink="0">
+          <Children>
+            { props.children }
+          </Children>
+        </BackgroundBlack>
+
 }
 export { BlackSide }

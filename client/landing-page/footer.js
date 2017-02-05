@@ -12,16 +12,17 @@ const RowFooter = styled(RowColumn)`
 	padding-top: 2em;
 	margin: 0;
 	width: 100%;
+	padding: .5em;
 `/* esfmt-ignore-end */
 
 export const Footer = props => {
-	return <RowFooter alignStart
+	return <RowFooter alignCenter
                    justifySpaceBetween>
           <Column>
-            <img style={ { height: "100px", width: "100px", margin: "10px" } }
+            <img style={ { height: "100px", width: "100px" } }
                  src={ logo } />
           </Column>
-          <Column style={ { height: "100px" } }
+          <Column style={ { height: "100px", margin: "16px" } }
                   alignEnd
                   justifyEnd>
             © 2016-present Kayla Fitzsimmons
