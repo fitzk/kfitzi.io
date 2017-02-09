@@ -8,17 +8,17 @@ const Header = styled(Row)`
 	margin-top: 1em;
   margin-bottom: 1em;
 `
+
 const SiteTitle = styled(H1)`
 	font-size: 4rem;
 `;
 
 const LandingPageHeader = props => {
-
 	return <Header>
           <Column alignCenter>
-									<SiteTitle>kayla fitzsimmons</SiteTitle>
-									<H2>software developer</H2>
-									<Links/>
+						<SiteTitle>kayla fitzsimmons</SiteTitle>
+						<H2>software developer</H2>
+						<Links/>
           </Column>
         </Header>
 }
