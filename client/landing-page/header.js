@@ -7,7 +7,7 @@ const Header = styled(Row)`
 	flex-shrink: 2;
 	margin-top: 1em;
   margin-bottom: 1em;
-`
+`;
 
 const SiteTitle = styled(H1)`
 	font-size: 4rem;
