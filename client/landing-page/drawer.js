@@ -2,37 +2,39 @@ import React, { Component } from "react"
 import { Drawer } from "material-ui"
 import { Link } from "react-router"
 import { Column, H2 } from "components"
+import styled from "styled-components"
 
+const StyledLink = styled(Link)`
+	margin: .5em;
+	fontSize: 1rem;
+	text-decoration: none;
+	color: black;
+	font-family: Roboto, sans-serif;
+`;
 
-const MaterialDrawer = ({open, updateDrawerState}) => {
-	let linkStyle = {
-		margin: ".5em",
-		fontSize: "1rem",
-		textDecoration: "none",
-		color: "black",
-		fontFamily: "Roboto, sans-serif"
-	}
-	return <Drawer open={ open }
-                style={ { padding: ".5em" } }
-                openSecondary={ true }>
-          <Column style={ { margin: "3em" } }
-                  alignCenter
-                  justifyCenter>
-            <Column alignStart
-                    justifyStart>
-              <Link onClick={ updateDrawerState }
-                    style={ linkStyle }
-                    to="/">
-              <H2 children="home" />
-              </Link>
-              <Link onClick={ updateDrawerState }
-                    style={ linkStyle }
-                    to="/projects">
-              <H2 children="projects" />
-              </Link>
+const StyledDrawer = styled(Drawer)`
+	padding: .25em;
+`;
+
+const Container = styled(Column)`
+	margin: 1em;
+`;
+
+const MaterialDrawer = ({ open, updateDrawerState }) => {
+
+	return <StyledDrawer open={ open }
+                			openSecondary={ true }>
+          <Container alignCenter justifyCenter>
+            <Column alignStart justifyStart>
+              <StyledLink onClick={ updateDrawerState } to="/projects">
+              	<H2 children="projects" />
+							</StyledLink>
+							<StyledLink onClick={ updateDrawerState } to="/activity">
+								<H2 children="latest gists" />
+							</StyledLink>
             </Column>
-          </Column>
-        </Drawer>
+          </Container>
+        </StyledDrawer>
 }
 
 export { MaterialDrawer }
