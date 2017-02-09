@@ -1,33 +1,25 @@
-import React, { Component } from "react"
-import { AppBar } from "material-ui"
-import { Link } from "react-router"
-import MediaQuery from "react-responsive"
+import React from "react"
 import styled from "styled-components"
-import { scroll } from "utils"
-import { Row, Column, RowColumn, H1, H2, ProfileImage } from "components"
-import { Drawer } from "./drawer"
-import me from "./../assets/images/me.jpg"
+import { Row, Column, H1, H2 } from "components"
 import { Links } from "./links"
 
-/* esfmt-ignore-start */
-export const Header = styled(Row)`
-	flex-shrink: 0;
+const Header = styled(Row)`
+	flex-shrink: 2;
+	margin-top: 1em;
+  margin-bottom: 1em;
 `
-export const NameContainer= styled(Column)`
-
-`
-	/* esfmt-ignore-end */
+const SiteTitle = styled(H1)`
+	font-size: 4rem;
+`;
 
 const LandingPageHeader = props => {
 
 	return <Header>
-          <NameContainer alignCenter>
-            { /* esfmt-ignore-start */ }
-									<H1>kayla fitzsimmons</H1>
+          <Column alignCenter>
+									<SiteTitle>kayla fitzsimmons</SiteTitle>
 									<H2>software developer</H2>
 									<Links/>
- 							{ /* esfmt-ignore-end */ }
-          </NameContainer>
+          </Column>
         </Header>
 }
 

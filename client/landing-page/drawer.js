@@ -6,7 +6,7 @@ import styled from "styled-components"
 
 const StyledLink = styled(Link)`
 	margin: .5em;
-	fontSize: 1rem;
+	fontSize: .75rem;
 	text-decoration: none;
 	color: black;
 	font-family: Roboto, sans-serif;
@@ -24,15 +24,13 @@ const MaterialDrawer = ({ open, updateDrawerState }) => {
 
 	return <StyledDrawer open={ open }
                 			openSecondary={ true }>
-          <Container alignCenter justifyCenter>
-            <Column alignStart justifyStart>
+          <Container alignStart justifyCenter>
               <StyledLink onClick={ updateDrawerState } to="/projects">
               	<H2 children="projects" />
 							</StyledLink>
 							<StyledLink onClick={ updateDrawerState } to="/activity">
 								<H2 children="latest gists" />
 							</StyledLink>
-            </Column>
           </Container>
         </StyledDrawer>
 }
