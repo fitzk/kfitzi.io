@@ -1,19 +1,17 @@
-import React, { Component } from "react"
-import { Router, Route, Link, IndexRoute, browserHistory } from "react-router"
-import ReactDOM from "react-dom"
+import React, { Component } from "react";
+import { Router, Route, Link, IndexRoute, browserHistory, Redirect } from "react-router";
+import ReactDOM from "react-dom";
+;
+import { createStore, applyMiddleware, combineReducers } from "redux";
+import { Provider } from "react-redux";
+import thunk from "redux-thunk";
+import { syncHistoryWithStore, routerReducer } from "react-router-redux";
 
-import { createStore, applyMiddleware, combineReducers } from "redux"
-import { Provider } from "react-redux"
-import thunk from "redux-thunk"
-import { syncHistoryWithStore, routerReducer } from "react-router-redux"
+import { App } from "./app";
+import { ActivityStream } from "./activity";
+import { Projects } from "./projects";
 
-import { App } from "./app"
-import { About } from "./about"
-import { ActivityStream } from "./activity"
-import { LandingPage } from "./landing-page"
-import { Projects } from "./projects"
-
-import reducers from "./reducers"
+import reducers from "./reducers";
 
 
 export class Routes extends Component {
@@ -33,10 +31,13 @@ export class Routes extends Component {
            <Router history={ history }>
              <Route component={ App }>
                <Route path="/"
-                      component={ ActivityStream } />
+                      component={ Projects } />
                <Route path="/projects"
                       component={ Projects } />
+							<Route path="/activity"
+										 component={ ActivityStream } />
              </Route>
+						 <Redirect from="/*" to="/" />
            </Router>
          </Provider>
 	}

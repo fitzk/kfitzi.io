@@ -1,9 +1,8 @@
-import React, { Component } from "react"
+import React from "react"
 import { AppContainer } from "react-hot-loader"
 import { render } from "react-dom"
 import injectTapEventPlugin from "react-tap-event-plugin"
 import { Routes } from "./routes"
-import "./index.scss"
 
 injectTapEventPlugin()
 
