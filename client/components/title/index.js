@@ -11,7 +11,6 @@ const title = styled.div`
 export const H1 = styled(title)`
   ${media.handheld`word-wrap: break-word;`}
   ${media.handheld`word-break: normal;`}
-
   color: ${props => props.theme.palette.accent3Color};
   margin-left: ${props => props.marginLeft};
   font-weight: bold;
@@ -23,4 +22,13 @@ export const H1 = styled(title)`
 export const H2 = styled(title)`
   font-size: 2em;
   ${media.handheld`font-size: 1em;`}
+`;
+
+export const PageTitle = styled(H1)`
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  font-size: 2.5rem;
+  color: white;
+ ${ media.handheld`
+    font-size: 2.75rem;`}
 `;

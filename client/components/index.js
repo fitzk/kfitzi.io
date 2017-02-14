@@ -1,5 +1,7 @@
-export { H1, H2 } from "./title"
+export { H1, H2, PageTitle } from "./title"
 export { ProfileImage } from "./image"
 export { Row, Column, Display, RowColumn } from "./flex"
 export { Button, LinkButton } from "./button"
 export { A } from "./a"
+export { Loading } from "./loading"
+export { LinkedIcon } from "./linked-icon"

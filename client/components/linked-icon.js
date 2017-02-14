@@ -4,12 +4,13 @@ import { Row, A } from "components"
 
 const Link = styled(A)`
 		color: black;
-		height: 10px;
 `;
 
 const FontContainer = styled.div`
-	height: 1em;
 	margin: 5px;
+	& .fa:hover {
+		color: orange;
+	}
 `;
 
 const LinkedIcon = ({ link, fontAwesomeClass }) => {
