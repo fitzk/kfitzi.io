@@ -2,16 +2,14 @@
 @import "~codemirror/theme/neo.css";
 
 .CodeMirror pre {
-	font-family: Roboto, sans-serif;
-}
-.CodeMirror {
-	height: auto!important;
-	position: relative;
-	overflow-y: scroll;
+
 }
 
+.CodeMirror {
+
+}
 .ReactCodeMirror {
-	width: "50vw"
+
 }
 .cm-def {
 		text-decoration: none;

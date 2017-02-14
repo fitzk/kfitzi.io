@@ -4,38 +4,42 @@ import { Card, CardHeader, CardText } from "material-ui"
 import CodeMirror from "react-codemirror"
 import "codemirror/mode/javascript/javascript"
 import "codemirror/mode/python/python"
-import "./index.scss"
-import styled from "styled-components"
-import MediaQuery from "react-responsive"
+import "codemirror/lib/codemirror.css";
+import "codemirror/theme/neo.css"
+import styled, { injectGlobal } from "styled-components"
+import { media } from "components/media"
 
-/*esfmt-ignore-start*/
 const FileContainer = styled(Column)`
 	flex-grow: 2;
-  width: auto;
 	align-self: center;
 	padding: 16px;
 `
-const CodeBin = styled(Row)`
-	font-family: Roboto, Sans-serif;
-`/*esfmt-ignore-end*/
+const CodeBin = styled(CodeMirror)`
+	font-family: Roboto, sans-serif;
+	height: auto !important;
+	position: relative;
+	overflow-y: scroll;
+`;
 
-const File = ({index, filename, language, code}) => {
+const CardWrapper = styled(Card)`
+	${ media.handheld`
+		 width: 90vw;` }
+ ${ media.desktop`
+		 width: 50vw;` }
+`;
+const File = ({ index, filename, language, code }) => {
 	return <FileContainer width="min-content"
                        alignStart
                        justifyStart>
-          <Card containerStyle={ { width: "60vw" } }
-                initiallyExpanded={ false }>
+          <CardWrapper initiallyExpanded={ false }>
             <CardHeader title={ filename }
                         actAsExpander
                         showExpandableButton={ true } />
             <CardText expandable={ true }>
-              <CodeBin alignCenter
-                       justifyStart>
                 <CodeMirror options={ { lineNumbers: true, mode: language.toLowerCase(), theme: "neo" } }
                             value={ code } />
-              </CodeBin>
             </CardText>
-          </Card>
+          </CardWrapper>
         </FileContainer>
 
 

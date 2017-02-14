@@ -1,18 +1,14 @@
 import React, { Component } from "react"
 import "whatwg-fetch"
-import { Row, Column, H1, H2 } from "components"
+import { Column, H2, Loading  } from "components"
 import * as moment from "moment"
-import "./index.scss"
 import { File } from "./file"
 import { Gist } from "./gist"
 import styled from "styled-components"
 
-/*esfmt-ignore-start*/
-
 const GistContainer = styled(Column)`
 	color: white;
-`
-/*esfmt-ignore-end*/
+`;
 
 export class Gists extends Component {
 	constructor(props) {
@@ -134,12 +130,15 @@ export class Gists extends Component {
 	}
 
 	render() {
-		let gists = <H2 children="loading..." />
+
+		let gists = <Loading/>
 
 		if (this.state.gists) {
+
 			gists = this.state.gists.map(gist => {
 
 				let codefiles = gist.fileObjects.map(file => {
+					
 					let index = gist.fileObjects.indexOf(file)
 					return <File key={ index }
                   filename={ file.filename }
@@ -154,7 +153,9 @@ export class Gists extends Component {
            </Gist>
 			});
 		}
-		return <GistContainer alignCenter
+		return <GistContainer
+			alignCenter
+
                         justifyCenter
                         wrap>
            { gists }
