@@ -1,8 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-import { Row, A } from "components"
+import React from "react";
+import styled from "styled-components";
+import { NavAway } from "components";
+import { Row } from "styled-flex";
 
-const Link = styled(A)`
+const BlackNavAway = styled(NavAway)`
 		color: black;
 `;
 
@@ -15,10 +16,10 @@ const FontContainer = styled.div`
 
 const LinkedIcon = ({ link, fontAwesomeClass }) => {
 	return <FontContainer>
-	            <Link href={ link }>
+	            <BlackNavAway href={ link }>
 	              <i className={ fontAwesomeClass }/>
-	            </Link>
+	            </BlackNavAway>
 	       </FontContainer>
 }
 
-export { LinkedIcon }
+export { LinkedIcon };

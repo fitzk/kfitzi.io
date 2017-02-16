@@ -1,6 +1,7 @@
-import React from "react"
-import styled from "styled-components";
-import { Column } from "./flex"
+import React from "react";
+import styled, { keyframes } from "styled-components";
+import { Column } from "styled-flex";
+import { fadeAway } from "./animations";
 
 const Container = styled(Column)`
 	width: 100vw;
