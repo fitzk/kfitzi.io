@@ -34,8 +34,10 @@ export default () => ({
 			"react-router",
 			"react-router-dom",
 			"react-scroll",
+			"react-material-tile",
 			"react-tap-event-plugin",
 			"styled-components",
+			"styled-flex",
 			"whatwg-fetch"
 		]
 	},
@@ -93,8 +95,7 @@ export default () => ({
 						{
 							loader: "sass-loader"
 						}
-					],
-					fallbackLoader: "style-loader"
+					]
 				})
 			},
 			{
@@ -134,7 +135,8 @@ export default () => ({
 		hot: true,
 		stats: {
 			colors: true
-		}
+		},
+		historyApiFallback: true
 	},
 	node: {
 		fs: "empty"
