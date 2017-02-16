@@ -4,13 +4,14 @@
   "description": "Kayla Fitzsimmons portfolio site.",
   "main": "index.js",
   "scripts": {
-    "eslint": "node_modules/.bin/eslint .",
+    "lint:css": "stylelint \"./client/*/*.js\"",
     "build": "node_modules/.bin/webpack  --config ./webpack.config.babel.js",
     "dev": "node_modules/.bin/webpack-dev-server --config ./webpack.config.babel.js",
     "debug": "node_modules/.bin/webpack-dev-server --config ./webpack.config.babel.js --debug"
   },
   "keywords": [
-    "portfolio", "react"
+    "portfolio",
+    "react"
   ],
   "author": "Kayla Fitzsimmons",
   "license": "MIT",
@@ -68,6 +69,9 @@
     "react-hot-loader": "^3.0.0-beta.6",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
+    "stylelint": "^7.8.0",
+    "stylelint-config-standard": "^16.0.0",
+    "stylelint-processor-styled-components": "0.0.4",
     "url-loader": "^0.5.7",
     "webpack": "^2.2",
     "webpack-dev-server": "^2",
