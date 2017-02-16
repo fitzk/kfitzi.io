@@ -1,13 +1,13 @@
-import React, { Component } from "react"
-import styled from "styled-components"
-import { AppBar } from "material-ui"
+import React, { Component } from "react";
+import styled from "styled-components";
+import { AppBar } from "material-ui";
 
 // project components
-import { Column } from "components/flex"
-import { MaterialDrawer as Drawer } from "./drawer"
-import { Footer } from "./footer"
-import { LandingPageHeader as Header } from "./header.js"
-import { media } from "components/media"
+import { Column } from "styled-flex";
+import { MaterialDrawer as Drawer } from "./drawer";
+import { Footer } from "./footer";
+import { LandingPageHeader as Header } from "./header.js";
+import { media } from "components/media";
 
 
 const Bar = styled(AppBar)`
@@ -27,6 +27,7 @@ const ContentSection = styled(Column)`
 	padding-bottom: 8vh;
 	overflow-y: visible;
 	height: auto;
+	min-height: 100vh;
 `;
 
 const HeaderSection = styled(Column)`

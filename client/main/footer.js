@@ -1,8 +1,10 @@
 import React from "react";
 import logo from "./../assets/images/logo/logo_transparent_background.png";
-import styled from "styled-components";
-import { RowColumn, Column } from "components";
+import styled, { css } from "styled-components";
+import { Column } from "styled-flex";
+import { NavAwayBlack, RowColumn } from "components";
 import { media } from "components/media";
+import { Links } from "./links"
 
 const FooterContainer = styled(RowColumn)`
 	background-color: ${ props => props.theme.palette.primary1Color };
@@ -12,28 +14,47 @@ const FooterContainer = styled(RowColumn)`
 	margin: 0;
 	width: 100%;
 	padding: .5em;
+	height: 25vh;
+`;
+
+const base = css`
+	height: 20vh;
+	margin: 16px;
+	width: 30vw;
 `;
 
 const LogoContainer = styled(Column)`
-	margin: 2px;
+	${ base }
 `;
 
 const Logo = styled.img`
-	height: 10vh;
+	height: 10em;
 `;
 
 const CopyContainer = styled(Column)`
-	height: 10vh;
-	margin: 16px;
+ ${ base }
+`;
+
+const LinksContainer = styled(Column)`
+	${ base }
+`;
+
+const LinksWrapper = styled.div`
+	width: 7vw;
 `;
 
 export const Footer = props => {
 	return <FooterContainer alignCenter justifySpaceBetween>
-          <LogoContainer>
+          <LogoContainer alignStart justifyEnd>
             <Logo src={ logo } />
           </LogoContainer>
-      		<CopyContainer alignEnd justifyEnd>
+      		<CopyContainer alignCenter justifyEnd>
             © 2016-present Kayla Fitzsimmons
           </CopyContainer>
+					<LinksContainer alignCenter justifyEnd>
+						<LinksWrapper>
+							<Links row/>
+						</LinksWrapper>
+					</LinksContainer>
         </FooterContainer>
 }

@@ -1,7 +1,8 @@
 import React, { Component } from "react"
 import { Drawer } from "material-ui"
 import { Link } from "react-router"
-import { Column, H2 } from "components"
+import { Column } from "styled-flex"
+import { H2 } from "components"
 import styled from "styled-components"
 
 const StyledLink = styled(Link)`

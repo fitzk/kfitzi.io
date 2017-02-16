@@ -1,7 +1,8 @@
-import React from "react"
-import styled from "styled-components"
-import { Row, Column, H1, H2 } from "components"
-import { Links } from "./links"
+import React from "react";
+import styled from "styled-components";
+import { H1, H2 } from "components";
+import {  Row, Column } from "styled-flex";
+import { Links } from "./links";
 
 const Header = styled(Row)`
 	flex-shrink: 2;
@@ -18,7 +19,7 @@ const LandingPageHeader = props => {
           <Column alignCenter>
 						<SiteTitle>kayla fitzsimmons</SiteTitle>
 						<H2>software developer</H2>
-						<Links/>
+						<Links row/>
           </Column>
         </Header>
 }
