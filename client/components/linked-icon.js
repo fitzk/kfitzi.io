@@ -4,14 +4,14 @@ import { NavAway } from "components";
 import { Row } from "styled-flex";
 
 const BlackNavAway = styled(NavAway)`
-		color: black;
+  color: black;
 `;
 
 const FontContainer = styled.div`
-	margin: 5px;
-	& .fa:hover {
-		color: orange;
-	}
+  margin: 5px;
+  & .fa:hover {
+    color: orange;
+  }
 `;
 
 const LinkedIcon = ({ link, fontAwesomeClass }) => {
