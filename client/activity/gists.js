@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import "whatwg-fetch"
-import { Column, H2, Loading  } from "components"
+import { H2, Loading  } from "components"
+import { Column } from "styled-flex"
 import * as moment from "moment"
 import { File } from "./file"
 import { Gist } from "./gist"
@@ -138,7 +139,7 @@ export class Gists extends Component {
 			gists = this.state.gists.map(gist => {
 
 				let codefiles = gist.fileObjects.map(file => {
-					
+
 					let index = gist.fileObjects.indexOf(file)
 					return <File key={ index }
                   filename={ file.filename }

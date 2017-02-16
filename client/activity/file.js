@@ -1,5 +1,5 @@
 import React from "react"
-import { Row, Column } from "components"
+import { Row, Column } from "styled-flex"
 import { Card, CardHeader, CardText } from "material-ui"
 import CodeMirror from "react-codemirror"
 import "codemirror/mode/javascript/javascript"
@@ -27,6 +27,7 @@ const CardWrapper = styled(Card)`
  ${ media.desktop`
 		 width: 50vw;` }
 `;
+
 const File = ({ index, filename, language, code }) => {
 	return <FileContainer width="min-content"
                        alignStart
@@ -43,5 +44,6 @@ const File = ({ index, filename, language, code }) => {
         </FileContainer>
 
 
-}
-export { File }
+};
+
+export { File };

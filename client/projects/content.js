@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Row } from "components"
+import { Row } from "styled-flex";
 import { Chip, CardText } from "material-ui";
 import { truncate } from "components/utils";
 import { media }  from "components/media";
@@ -34,18 +34,18 @@ const Description = styled.p`
 
 const TextArea = styled(CardText)`
 	margin: 8px;
-	${ media.handheld`${ truncate("300px") }` }
+	${ media.handheld`${ truncate("200px") }` }
 `;
 
 const Content = ({ updated, created, description }) => {
 	return 	<TextArea>
 							<MetaContent justifyStart alignStart>
 									 <MetaChip backgroundColor="none" labelColor="black">
-										 <i className="fa fa-pencil fa-lg"/>  {` ${updated}`} </MetaChip>
+										 <i className="fa fa-pencil fa-lg"/>  { ` ${updated}` } </MetaChip>
 									 <MetaChip backgroundColor="none" labelColor="black">
-										 <i className="fa fa-birthday-cake"/> {` ${created}`} </MetaChip>
+										 <i className="fa fa-birthday-cake"/> { ` ${created}` } </MetaChip>
 							</MetaContent>
-							<Description>{ description }</Description>
+							<Description> { description } </Description>
 				</TextArea>
 }
 export { Content }

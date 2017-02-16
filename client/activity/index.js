@@ -1,11 +1,11 @@
-import React, { Component } from "react"
-import "whatwg-fetch"
-import { Paper } from "material-ui"
-import { Row, Column, PageTitle} from "components"
-import CodeMirror from "react-codemirror"
-import { scroll } from "utils"
-import styled from "styled-components"
-import { Gists } from "./gists"
+import React, { Component } from "react";
+import "whatwg-fetch";
+import { Paper } from "material-ui";
+import CodeMirror from "react-codemirror";
+import styled from "styled-components";
+import { PageTitle } from "components";
+import { Row, Column } from "styled-flex";
+import { Gists } from "./gists";
 
 const Container = styled(Column)`
 `;

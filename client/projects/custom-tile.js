@@ -2,21 +2,19 @@ import React, { Component } from "react"
 import styled, { keyframes } from "styled-components"
 import MaterialTile from "react-material-tile"
 import { CustomHeader } from "./custom-header"
+import { Content } from "./content"
 import { media, browser }  from "components/media"
-
-const fade = keyframes`
-  0% { 	transfrom: scaleY(1.5);
-				background-color: black; }
-  100% { transform: scaleY(1);
-				 background-color: white }
-`;
+import { fade } from "components/animations"
 
 const StyledMaterialTile = styled(MaterialTile)`
 	height: auto;
+	overflow: hidden;
+	margin-bottom: 5px;
+	min-width: 55vw;
 	& div img {
-		animation: ${ fade } 0.3s 0s ease-in-out;
+		animation: ${ fade } 500ms 0 ease-in;
 	}
-	animation: ${ fade } 0.3s 0s ease-in-out;
+	animation: ${ fade } 500ms 0 ease-in;
 	order: ${ props => props.order };
 	${ media.desktop`
 		 width: 55vw;` }
@@ -26,23 +24,19 @@ const StyledMaterialTile = styled(MaterialTile)`
 
 const Tile = ({ displayName, name, src, updated,
 								created, width, height, url, homepage,
-								order, initiallyExpanded, children }) => {
-	return <StyledMaterialTile
-												title = { displayName || name }
-												rounded
-												noImageInHeader
-												CustomHeader={ <CustomHeader /> }
-												src={ src }
-												updated={ updated }
-												created={ created }
-												tileWidth={ width }
-												tileHeight={ height }
-												order={ order }
-												initiallyExpanded={ initiallyExpanded }
-												homepage={ homepage }
-												url={ url }>
-						{ children }
-				 </StyledMaterialTile>
+								description, order, initiallyExpanded, children }) => {
+	return <StyledMaterialTile title = { displayName || name }
+														 noImageInHeader
+														 CustomHeader={ <CustomHeader homepage={ homepage } url={ url } /> }
+														 src={ src }
+														 tileWidth={ width }
+														 tileHeight={ height }
+														 order={ order }
+														 initiallyExpanded={ initiallyExpanded }>
+															 <Content created={ created }
+																				updated={ updated }
+																				description={ description }/>
+				 								</StyledMaterialTile>
 };
 
 export { Tile };

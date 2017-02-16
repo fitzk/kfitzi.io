@@ -1,6 +1,6 @@
-import React, { Component } from "react"
-import styled from "styled-components"
-import { Row, Column } from "components"
+import React, { Component } from "react";
+import styled from "styled-components";
+import { Row, Column } from "styled-flex";
 
 const Container = styled(Column)`
 	background-color: black;
